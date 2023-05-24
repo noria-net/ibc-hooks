@@ -1,0 +1,106 @@
+version: 1
+accounts:
+  - name: val1
+    coins:
+      - 1000000000ucrd
+      - 1000000000unoria
+  - name: me
+    coins:
+      - 1000000000ucrd
+      - 1000000000unoria
+  - name: faucet
+    coins:
+      - 1000000000ucrd
+      - 1000000000unoria
+client:
+  openapi:
+    path: docs/static/openapi.yml
+faucet:
+  name: faucet
+  coins:
+    - 10000000ucrd
+    - 10000000unoria
+validators:
+  - name: val1
+    bonded: 100000000stake
+build:
+  main: ./cmd/wasmd
+  binary: chaind
+genesis:
+  app_state:
+    bank:
+      denom_metadata:
+      - base: ucrd
+        denom_units:
+        - aliases:
+          - microcrd
+          denom: ucrd
+          exponent: 0
+        - aliases: []
+          denom: crd
+          exponent: 6
+        description: The Cooperative Denom token
+        display: crd
+        name: CRD
+        symbol: CRD
+      - base: unoria
+        denom_units:
+        - aliases:
+          - micronoria
+          denom: unoria
+          exponent: 0
+        - aliases: []
+          denom: noria
+          exponent: 6
+        description: The native staking token of Noria
+        display: noria
+        name: NORIA
+        symbol: NORIA
+    distribution:
+      params:
+        community_tax: "0.0"
+    gov:
+      deposit_params:
+        max_deposit_period: 300s
+        min_deposit:
+        - amount: "1000000"
+          denom: unoria
+      tally_params:
+        quorum: "0.000001"
+      voting_params:
+        voting_period: 30s
+    mint:
+      minter:
+        annual_provisions: "0.0"
+        inflation: "0.0"
+      params:
+        blocks_per_year: "6307200"
+        inflation_max: "0.0"
+        inflation_min: "0.0"
+        inflation_rate_change: "0.0"
+        mint_denom: unoria
+    staking:
+      params:
+        bond_denom: unoria
+    tokenfactory:
+      params:
+        denom_creation_fee:
+        - amount: "1000000"
+          denom: ucrd
+  chain_id: chain-1
+validators:
+- name: val1
+  bonded: 400000000unoria
+  app:
+    api:
+      enable: true
+      swagger: true
+  config:
+    consensus:
+      timeout_commit: 5s
+      timeout_precommit: 1s
+      timeout_precommit_delta: 500ms
+      timeout_prevote: 1s
+      timeout_prevote_delta: 500ms
+      timeout_propose: 3s
+      timeout_propose_delta: 500ms
