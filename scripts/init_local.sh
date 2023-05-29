@@ -11,7 +11,7 @@
 BINARY_NAME="chaind"
 BINARY_HOME="$HOME/.chain"
 CONFIG_HOME="$BINARY_HOME/config"
-CHAIN_ID="chain-1"
+CHAIN_ID="chain-ibc-hooks-1"
 DENOM="unoria"
 GAS_PRICE="0.0025"
 GAS_PRICE_DENOM="ucrd"
