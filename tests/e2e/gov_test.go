@@ -12,8 +12,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
+	"github.com/CosmWasm/wasmd/x/wasm/ibctesting"
 	"github.com/noria-net/ibc-hooks/tests/e2e"
-	"github.com/noria-net/ibc-hooks/x/wasm/ibctesting"
 )
 
 func TestGovVoteByContract(t *testing.T) {

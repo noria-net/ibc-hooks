@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	wasmtypes "github.com/noria-net/ibc-hooks/x/wasm/types"
+	wasmtypes "github.com/CosmWasm/wasmd/x/wasm/types"
 
 	dbm "github.com/cometbft/cometbft-db"
 	abci "github.com/cometbft/cometbft/abci/types"
@@ -38,7 +38,7 @@ import (
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 	"github.com/stretchr/testify/require"
 
-	"github.com/noria-net/ibc-hooks/x/wasm"
+	"github.com/CosmWasm/wasmd/x/wasm"
 )
 
 // SimAppChainID hardcoded chainID for simulation

@@ -127,9 +127,9 @@ import (
 
 	govclient "github.com/cosmos/cosmos-sdk/x/gov/client"
 
-	"github.com/noria-net/ibc-hooks/x/wasm"
-	wasmkeeper "github.com/noria-net/ibc-hooks/x/wasm/keeper"
-	wasmtypes "github.com/noria-net/ibc-hooks/x/wasm/types"
+	"github.com/CosmWasm/wasmd/x/wasm"
+	wasmkeeper "github.com/CosmWasm/wasmd/x/wasm/keeper"
+	wasmtypes "github.com/CosmWasm/wasmd/x/wasm/types"
 	// this line is used by starport scaffolding # stargate/app/moduleImport
 )
 
@@ -636,7 +636,6 @@ func NewWasmApp(
 		app.BankKeeper,
 		app.StakingKeeper,
 		distrkeeper.NewQuerier(app.DistrKeeper),
-		app.IBCFeeKeeper, // ISC4 Wrapper: fee IBC middleware
 		app.IBCKeeper.ChannelKeeper,
 		&app.IBCKeeper.PortKeeper,
 		scopedWasmKeeper,

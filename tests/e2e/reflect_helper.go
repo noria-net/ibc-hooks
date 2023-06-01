@@ -9,9 +9,9 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 
-	"github.com/noria-net/ibc-hooks/x/wasm/ibctesting"
-	"github.com/noria-net/ibc-hooks/x/wasm/keeper/testdata"
-	"github.com/noria-net/ibc-hooks/x/wasm/types"
+	"github.com/CosmWasm/wasmd/x/wasm/ibctesting"
+	"github.com/CosmWasm/wasmd/x/wasm/keeper/testdata"
+	"github.com/CosmWasm/wasmd/x/wasm/types"
 )
 
 // InstantiateReflectContract store and instantiate a reflect contract instance

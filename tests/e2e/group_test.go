@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/noria-net/ibc-hooks/x/wasm/types"
+	"github.com/CosmWasm/wasmd/x/wasm/types"
 
 	"github.com/cometbft/cometbft/libs/rand"
 	sdk "github.com/cosmos/cosmos-sdk/types"
@@ -14,8 +14,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
+	"github.com/CosmWasm/wasmd/x/wasm/ibctesting"
 	"github.com/noria-net/ibc-hooks/tests/e2e"
-	"github.com/noria-net/ibc-hooks/x/wasm/ibctesting"
 )
 
 func TestGroupWithContract(t *testing.T) {
