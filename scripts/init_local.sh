@@ -8,7 +8,7 @@
 # This is not meant to be used when trying to sync to an existing chain,
 # but rather to work in a local development environment.
 
-BINARY_NAME="chaind"
+BINARY_NAME="wasmd"
 BINARY_HOME="$HOME/.chain"
 CONFIG_HOME="$BINARY_HOME/config"
 CHAIN_ID="chain-ibc-hooks-1"
