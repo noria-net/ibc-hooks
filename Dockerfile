@@ -29,7 +29,9 @@ RUN echo "Ensuring binary is statically linked ..." \
   && (file /code/build/wasmd | grep "statically linked")
 
 # --------------------------------------------------------
-FROM alpine:3.15
+FROM golang:1.20
+
+RUN apt-get update && apt-get install -y jq
 
 COPY --from=go-builder /code/build/wasmd /usr/bin/wasmd
 
